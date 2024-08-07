@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, 
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -18,28 +18,28 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var arrName = [
-      'Ayush Kumar',
-      'Likhit Reddy',
-      'Shivank Singh',
-      'Himanshu',
-      'Nitin',
-      'Vaibhav Singh',
-      'Rahul Singh',
-      'Rohit'
+      'MONDAY',
+      'TUESDAY',
+      'WEDNESDAY',
+      'THURSDAY',
+      'FRIDAY',
+      'SATURDAY',
+      'SUNDAY',
     ];
+    
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.menu, color: Colors.white),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
-           
+            // Handle back button action
           },
         ),
         title: Text(
-          'HOME',
-          style: TextStyle(color: Colors.white), 
+          'Flanks',
+          style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Colors.indigo, 
+        backgroundColor: Colors.white, // Set to indigo for visibility
         centerTitle: true,
       ),
       backgroundColor: Colors.white,
@@ -51,11 +51,14 @@ class HomePage extends StatelessWidget {
               ListTile(
                 leading: Icon(Icons.person, color: Colors.grey),
                 title: Text(arrName[index]),
-                subtitle: Text('FLANK '),
+                subtitle: Text('27/06/2024'), // Example date
                 trailing: Icon(Icons.arrow_forward, color: Colors.grey),
+                onTap: () {
+                  // Handle item tap
+                },
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 72.0), 
+                padding: const EdgeInsets.only(left: 72.0), // Align with leading icon
                 child: Divider(height: 10, thickness: 1),
               ),
             ],
@@ -64,12 +67,12 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          
+          // Handle FAB action
         },
         child: Icon(Icons.add, color: Colors.white),
-        backgroundColor: Colors.indigo, 
+        backgroundColor: Colors.indigo,
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }

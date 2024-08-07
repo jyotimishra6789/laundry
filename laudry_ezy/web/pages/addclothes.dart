@@ -36,13 +36,13 @@ class _AddClothesState extends State<AddClothes> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(color: Colors.white), // Add a back arrow icon
+        leading: BackButton(color: Colors.white), 
         title: Text(
           'Add Clothes',
-          style: TextStyle(color: Colors.white), // Set the text color to white
+          style: TextStyle(color: Colors.white), 
         ),
-        backgroundColor: Colors.indigo, // Set the background color of the AppBar to indigo
-        centerTitle: true, // Center-align the title
+        backgroundColor: Colors.indigo, 
+        centerTitle: true, 
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -54,23 +54,23 @@ class _AddClothesState extends State<AddClothes> {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: Colors.black, // Set text color to black for contrast
+                color: Colors.black, 
               ),
             ),
             SizedBox(height: 10),
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Action to choose an image
+                
                   print('Choose Image button pressed');
                 },
                 child: Text('Choose Image', style: TextStyle(color: Colors.white)),
                 style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder( // Set rectangular shape
-                    borderRadius: BorderRadius.circular(0), // Set border radius
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(0), 
                   ),
-                  backgroundColor: Colors.indigo, // Set the background color of the button
-                  minimumSize: Size(600, 200), // Set the button size
+                  backgroundColor: Colors.indigo, 
+                  minimumSize: Size(600, 200), 
                 ),
               ),
             ),
@@ -80,20 +80,20 @@ class _AddClothesState extends State<AddClothes> {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: Colors.black, // Set text color to black for contrast
+                color: Colors.black, 
               ),
             ),
             SizedBox(height: 10),
             Container(
-              width: double.infinity, // This makes the input box as wide as possible
-              padding: EdgeInsets.symmetric(horizontal: 12), // Add horizontal padding
+              width: double.infinity, 
+              padding: EdgeInsets.symmetric(horizontal: 12), 
               child: TextField(
                 controller: _clothNameController,
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
                   border: OutlineInputBorder(),
-                  hintText: 'Enter cloth name', // Set the hint text
+                  hintText: 'Enter cloth name', 
                 ),
               ),
             ),
@@ -101,15 +101,15 @@ class _AddClothesState extends State<AddClothes> {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Action to add clothes with the provided cloth name
+                
                   print('Cloth Name: ${_clothNameController.text}');
                   
-                  // Navigate back to the previous screen (homepage)
+                 
                   Navigator.pop(context);
                 },
                 child: Text('Add Clothes', style: TextStyle(color: Colors.indigo)),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white, // Set the background color of the button
+                  backgroundColor: Colors.white, 
                 ),
               ),
             ),

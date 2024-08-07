@@ -8,7 +8,7 @@ class UserProfileApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'User Profile',
+      title: 'HostelList',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -24,10 +24,7 @@ class UserProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(color: Colors.white), // Add a back arrow icon
-        title: Text(
-          'User Profile',
-          style: TextStyle(color: Colors.white), // Set the text color to white
-        ),
+        
         backgroundColor: Colors.indigo, // Set the background color of the AppBar to indigo
         centerTitle: true, // Center-align the title
       ),
